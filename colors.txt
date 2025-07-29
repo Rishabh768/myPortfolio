@@ -1,0 +1,31 @@
+
+Electric Sunset (Bold and Vibrant)
+
+Background: Dark Purple (#1B1F3B)
+Primary Accent: Neon Pink (#FF577F)
+Secondary Accent: Electric Orange (#FF9F45)
+Text: Soft White (#F7F7FF)
+
+
+Minimal Elegance (Clean and Professional)
+
+Background: Off-white (#F9F9F9)
+Primary Accent: Deep Navy (#2D3142)
+Secondary Accent: Coral (#EF8354)
+Text: Charcoal Black (#4F4F4F)
+
+
+Fresh and Energetic (Modern & Fun)
+
+Background: Mint Green (#E8F5E9)
+Primary Accent: Bright Yellow (#FFD166)
+Secondary Accent: Aqua Blue (#06D6A0)
+Text: Charcoal (#1D3557)
+
+
+Dark Futuristic (Tech and Coding Vibe)
+
+Background: Blackish Blue (#0B132B)
+Primary Accent: Neon Blue (#3A86FF)
+Secondary Accent: Cyan (#00F5D4)
+Text: Light Gray (#D9D9D9)

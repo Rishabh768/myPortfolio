@@ -1,0 +1,33 @@
+{
+  "name": "3d",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
+    "gsap": "^3.12.7",
+    "computed-style": "0.3.0",
+    "dat-gui": "0.5.0",
+    "dom-css": "^1.1.1",
+    "gl-matrix": "^2.3.1",
+    "glsl-random": "^0.0.5",
+    "glsl-noise": "^0.0.0",
+    "glsl-fxaa": "^3.0.0",
+    "incremental-convex-hull": "^1.0.1",
+    "min-signal": "^0.0.5",
+    "mout": "0.11",
+    "quick-loader": "^0.1.4",
+    "raf": "3.0.0",
+    "stats.js": "mrdoob/stats.js",
+    "underscore": "^1.8.3",
+    "ws": "^0.8.0"
+  }
+}
