@@ -6,31 +6,21 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 
-const lenis = new Lenis();
-lenis.on("scroll", ScrollTrigger.update);
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000 / 60); // Use correct time value for raf
+const lenis = new Lenis({
+  smooth: true,
+  gestureOrientation: 'both',
+  smoothTouch: true,
+  touchMultiplier: 1.5,
 });
-gsap.ticker.lagSmoothing(0);
+lenis.on("scroll", ScrollTrigger.update);
 
-// HERO SECTION
+
 const tl=gsap.timeline({
   delay:1,
-
 })
 
 
 
-
-tl.fromTo('.h, .first-name, .last-name',{
-    opacity:0,
-    scale:0,
-},{
-    opacity:1,
-    scale:1,
-    duration:0.6,
-    stagger: 0.2
-})
 
 
 gsap.fromTo('nav',{scale:0},{scale:1,duration:.4,delay:2});
@@ -79,6 +69,6 @@ function animateBoxes() {
   );
 }
 
-
 animateBoxes();
 window.addEventListener("resize", animateBoxes);
+
