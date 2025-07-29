@@ -5,20 +5,18 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
+
 const lenis = new Lenis();
 lenis.on("scroll", ScrollTrigger.update);
 gsap.ticker.add((time) => {
-  lenis.raf(time * 500);
+  lenis.raf(time * 1000 / 60); // Use correct time value for raf
 });
 gsap.ticker.lagSmoothing(0);
 
 // HERO SECTION
 const tl=gsap.timeline({
   delay:1,
-  // scrollTrigger:{
-  //   trigger:'.hero',
-  //   scrub:1
-  // }
+
 })
 
 
@@ -47,19 +45,22 @@ const links=document.querySelectorAll("nav ul li a");
  })
 
  document.querySelectorAll(".page").forEach((page) => {
-  gsap.fromTo(
-    page.querySelector(".header"),
-    { y: 40, opacity: 0 },
-    {
-      y: 0,
-      opacity: 1,
-      scrollTrigger: {
-        trigger: page,
-        start: "top 50%",
-        toggleActions: "play none none reverse",
-      },
-    }
-  );
+  const header = page.querySelector(".header");
+  if (header) {
+    gsap.fromTo(
+      header,
+      { y: 40, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: page,
+          start: "top 50%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }
 });
 
 
