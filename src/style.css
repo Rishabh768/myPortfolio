@@ -14,47 +14,38 @@
   box-sizing: border-box;
 }
 
-body {
-  box-sizing: border-box;
-  overflow-x: hidden; 
+html,body{
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
-
-html body::-webkit-scrollbar {
-  display: none; 
-}
+ html body::-webkit-scrollbar {
+  display:none ; 
+  overflow-x: hidden;
+ }
 
 canvas {
   position: relative;
   width: 100vw;
   height: 100vh;
   display: block;
-   touch-action: pan-y;
+ 
 }
-
-nav{
+nav {
   display: flex;
   position: absolute;
   top: 2vw;
-  left: 50%; 
+  left: 50%;
   transform: translateX(-50%);
+  z-index: 100; /* ensure navbar stays above content */
 }
 
-nav ul li a{
-  text-decoration: none;
-  color: white;
-  transition: all 0.5s ease-in-out;
-  display: inline-block;
-}
-nav ul li a:hover{
-  text-decoration: underline;
-  color: var(--primary-color);
-  transform:scale(1.2);
-}
-
-nav div{
+nav div {
   border-radius: 30px;
+  mix-blend-mode: difference;
   background-color: rgba(0, 0, 0, 0.6);
-  mix-blend-mode: difference; 
   color: white;
   overflow: hidden;
 }
@@ -63,8 +54,24 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 2vw;
-  padding: 2vw;
+  padding: 1.5vw 2vw; 
+  margin: 0; 
 }
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.5s ease-in-out;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
 
 .above-canvas {
   position: absolute;
@@ -78,14 +85,52 @@ nav ul {
   font-weight: bold;
   color: white; 
   mix-blend-mode: difference; 
+  overflow: auto;
   pointer-events: none; 
+  touch-action:manipulation;
 }
 
 .hero{
   display: flex;
   align-items: center;
+  flex-direction: column;
   padding: var(--primary-padding);
   flex-wrap: wrap;
+}
+.btns{
+  touch-action: auto;
+  pointer-events: all;
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.cta-btn {
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: #fff;
+  padding: 0.7em 2em;
+  border-radius: 2em;
+  font-size: 1.15rem;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  box-shadow: 2px 4px 15px var(--primary-color);
+  /* box-shadow: 0 4px 18px 0 rgba(58,134,255,0.15); */
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: 
+    background 0.3s cubic-bezier(.4,0,.2,1),
+    transform 0.15s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.2s;
+  display: inline-block;
+}
+.cta-btn:hover, .cta-btn:focus {
+  background: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 24px 0 rgba(58,134,255,0.25);
+  text-decoration: none;
 }
 
 .hero h2{
@@ -132,6 +177,7 @@ nav ul {
 
 #about{
   background-color: #c7d2d1;
+  color: black;
 }
 
 .header{
@@ -139,12 +185,13 @@ nav ul {
   background-color: #000;
   text-align: center;
   color: white;
-  font-size: clamp(1.5rem, 4vw, 2.4rem);
-  font-family: 'Courier New', Courier, monospace;
-  padding: 0.5em 2em;
+  font-weight: lighter;
+  padding: 0.5em 1.2em;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
-  overflow: hidden;
+  box-shadow: 2px 4px 15px var(--primary-color);
+  width: 220px;
+  white-space: nowrap; 
 }
 
 #about h1{
@@ -358,34 +405,38 @@ nav ul {
   .container{
     padding: var(--primary-Mpadding);
   }
+ 
   .a-flex{
     gap: 2rem;
     align-items: center;
     flex-direction: column-reverse;
   }
   .img-container img{
-    max-width: 250px;
+    max-width: 350px;
   }
+   
 }
 
 @media screen and (max-width: 768px) {
   .container{
     padding: var(--primary-Mpadding);
   }
+ 
   .a-flex{
     gap: 1.5rem;
     align-items: center;
     flex-direction: column-reverse;
   }
-  #about h1{
+  /* #about h1{
     font-size: 2rem;
-  }
+  } */
   .about-me p{
     font-size: 1rem;
   }
   .img-container img{
     max-width: 200px;
   }
+ 
   .hero{
     padding: var(--primary-Mpadding);
     flex-direction: column;
