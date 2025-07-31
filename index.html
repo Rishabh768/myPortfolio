@@ -35,13 +35,13 @@
           user-friendly websites and applications.
         </p>
       </div>
-        <div class="btns">
+        <div class="cta-container"> 
           <a href="mailto:chauhanrishabh768@gmail.com" class="cta-btn">Contact Me</a>
         </div>
       </div>
 
       <div class="pages">
-        <section id="about"   class="page">
+        <section id="about"  class="page">
              <div class="container">
                  <h2 class="header">About Me</h2>
                  <div class="a-flex">
@@ -63,111 +63,25 @@
              </div>
         </section>
 
+
         <section id="project" class="page">
           <div class="container">
             <h2 class="header">Projects</h2>
-            <div class="card-container">
-                  <div class="card">
-                    <div class="card-image">
-                      <img src="https://picsum.photos/500/300" alt="">
-                    </div>
-                    <div class="card-title">
-                      <h3>Doctor's Appointment System</h3>
-                    </div>
-                    <div class="card-description">
-                      Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. 
-                      Vitae, voluptates?
-                    </div>
-                    <div class="btns">
-                      <a href="#">Code</a>
-                      <a href="#">visit </a>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card-image">
-                      <img src="https://picsum.photos/500/300" alt="">
-                    </div>
-                    <div class="card-title">
-                      <h3>Doctor's Appointment System</h3>
-                    </div>
-                    <div class="card-description">
-                      Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. 
-                      Vitae, voluptates?
-                    </div>
-                    <div class="btns">
-                      <a href="#">Code</a>
-                      <a href="#">visit </a>
-                    </div>
-                  </div>
-
-                  <div class="card">
-                    <div class="card-image">
-                      <img src="https://picsum.photos/500/300" alt="">
-                    </div>
-                    <div class="card-title">
-                      <h3>Doctor's Appointment System</h3>
-                    </div>
-                    <div class="card-description">
-                      Lorem ipsum dolor sit amet,
-                      consectetur adipisicing elit. 
-                      Vitae, voluptates?
-                    </div>
-                    <div class="btns">
-                      <a href="#">Code</a>
-                      <a href="#">visit </a>
-                    </div>
-                  </div>
+            <div class="project-wrapper"> 
+              </div>
             </div>
-
-          </div>
         </section>
 
+       
         <section id="skill"   class="page">
           <div class="container">
             <h2 class="header">Skills</h2>
                <div class="skill-container">
-                     <div class="skill">
-                      <div>
-                        <img src="/img/react.svg" alt="react">
-                        <h3>React Js</h3>
-                      </div>
-                         
-                     </div>
-                     <div class="skill">
-                      <div>
-                        <img src="/img/html-1.svg" alt="html">
-                        <h3>Html</h3>
-                      </div>
-                         
-                     </div>
-                     <div class="skill">
-                      <div>
-                        <img src="/img/css-3.svg" alt="html">
-                        <h3>Css</h3>
-                      </div>
-                          
-                     </div>
-                     <div class="skill">
-                      <div>
-                        <img src="/img/logo-javascript.svg" alt="html">
-                        <h3>Javascript</h3>
-                      </div>
-                          
-                     </div>
-                     <div class="skill">
-                      <div>
-                        <img src="/img/mongodb-icon-1.svg" alt="html">
-                        <h3>Mongo db</h3>
-                      </div>
-                         
-                     </div>
 
                </div>
+               </div>
 
-          </div>
+          
         </section>
 
         <section id="contact" class="page">
@@ -175,23 +89,24 @@
             <h2 class="header">Contact Me</h2>
         
             <div class="contact-wrapper">
-              <div class="contact-form">
+              <form method="POST" action="https://api.web3forms.com/submit"  class="contact-form">
+                <input type="hidden" name="apikey" value="dab56ae5-52b5-4774-80ea-f7418dec9967">
                 <div>
                   <label for="name">Name</label>
-                  <input type="text" name="name" id="name">
+                  <input required type="text" name="name" id="name">
                 </div>
 
                 <div>
                   <label for="email">Email</label>
-                  <input type="text" name="email" id="email">
+                  <input required type="text" name="email" id="email">
                 </div>
 
                 <div>
                   <label for="textarea">Description</label>
-                  <textarea name="textarea" id="textarea"></textarea>
+                  <textarea required name="textarea" id="textarea"></textarea>
                 </div>
-                      <button>Contact me</button>
-              </div>
+                      <button type="submit">Contact me</button>
+              </form>
 
               <div class="contact-details">
                 <div>
